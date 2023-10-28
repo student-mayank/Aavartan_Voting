@@ -140,7 +140,7 @@ app.post("/login_user", async (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.send("hello");
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
 app.get("/signin", (req, res) => {
@@ -153,8 +153,6 @@ app.get("/signin", (req, res) => {
   //   latitude,
   //   longitude,
   // });
-
-  res.sendFile(path.join(__dirname, "index.html"));
 });
 app.get("/register", (req, res) => {
   res.send("thank You for voting!");
